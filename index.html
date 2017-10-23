@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>NYT Article Search</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!--link Bootstrap CSS file hrere and the  Bootstrap JS files towards the end of the file -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- Link CSS files -->
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div class="jumbotron header">
+		<h1>New York Times Search</h1>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- Search Window -->
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title"> Search Attributes </h3>
+					</div>
+					<div class="panel-body">
+						<form role="form">
+							<div class="form-group">
+								<label for="search">Search Term: </label>
+								<input type="text" class="form-control" id="search-term">
+							</div>
+							<div class="form-group">
+								<label for="num-records">No of Records to Retrieve:</label>
+								<select class="form-control" id="num-records">
+									<option value="1">1</option>
+									<option value="5">5</option>
+									<option value="10">10</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="start-year">Start Year</label>
+								<input type="text" class="form-control" id="start-year">
+							</div>
+							<div class="form-group">
+								<label for="end-year">End Year</label>
+								<input type="text" class="form-control" id="end-year">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div> <!-- Panel -->
+			<div class="button-style">
+				<button type="submit" class="btn btn-default" id="run-search"><i class="fa fa-search"></i>Search</button>
+				<button type="button" class="btn btn-default" id="clear-all"><i class="fa fa-trash"></i>Clear All</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title"><i class="fa fa-table fa-style"></i>Results:</h3>
+					</div>
+					<div class="panel-body" id="well-section">
+						<!--JQuery adds the results here-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+	<!-- Link in Bootstrap's Jquery -->
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Link in my Javascript -->
+	<script type="text/javascript" src="./nyt.js"></script>
+</body>
+</html>
